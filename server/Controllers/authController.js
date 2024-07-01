@@ -11,7 +11,9 @@ const authController = {
             password
         } = req.body
 
-        console.log(req.body)
+        // console.log(req.body)
+
+        const checkUser = await User.findOne({ email: email, username: username})
 
     },
 
