@@ -11,7 +11,8 @@ const authController = {
             password
         } = req.body
 
-        
+        console.log(req.body)
+
     },
 
     SignIn: async (req, res) => {
