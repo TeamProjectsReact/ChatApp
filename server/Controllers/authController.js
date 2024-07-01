@@ -50,7 +50,9 @@ const authController = {
             password
         } = req.body
 
-        console.log(req.body)
+        // console.log(req.body)
+
+        
     }
 }
 
