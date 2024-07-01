@@ -15,17 +15,8 @@ const Dashboard = () => {
 
     if(RoleUser !== null && EmailUser !== null){
         return (
-            <div className='bg-gray-200 py-8 px-12'>
-                <div className="bg-white rounded py-8 px-4">
-                    <h1 className="text-gray-500 font-semibold text-2xl">Welcome to Dashboard</h1>
-                    <hr />
+            <div className="bg-[url('https://wallpapercave.com/wp/wp3998740.png')] bg-cover bg-center py-8 px-12 min-h-screen">
 
-                    <div className="my-4 mx-8">
-                        <p className="text-xl text-gray-500">Email : { EmailUser }</p>
-                        <p className="text-xl text-gray-500">Role: { RoleUser }</p>                        
-                    </div>
-                    <button onClick={logout} className="bg-red-500 text-white rounded py-2 px-4 shadow-md duration-500 hover:bg-red-600 font-semibold">Logout</button>
-                </div>
             </div>
         )
     }
