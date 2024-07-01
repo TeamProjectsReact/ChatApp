@@ -22,13 +22,26 @@ const authController = {
             const passHash = await bcrypt.hash(password, 10);
 
             if(passHash){
-                
+                const UserNew = new User({
+                    username: username,
+                    email: email,
+                    password: passHash,
+                    Role: 'User'
+                })
+
+                const ResultUser = UserNew.save()
+
+                if(ResultUser){
+                    return res.json({ Status: "Success" })
+                }
+                else{
+                    return res.json({ Error: "Error White Inserting User to database"})
+                }
             }
             else{
                 return  res.json({ Error: "Error while Hashing Password"})
             }
         }
-
     },
 
     SignIn: async (req, res) => {
