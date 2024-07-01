@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BsMortarboardFill } from "react-icons/bs";
+import { BsChatLeftFill, BsMortarboardFill } from "react-icons/bs";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import  secureLocalStorage  from  "react-secure-storage";
@@ -44,14 +44,13 @@ const SignIn = () => {
         <div className="md:grid grid-cols-3 gap-2">
             <div className=""></div>
             <div className="">
-                <div className="bg-white py-16 px-8 rounded shadow-md w-full ">
-                    <center className='text-gray-500'>
-                        {/* change the Icon According to your needs */}
-                        <h1 className=''><BsMortarboardFill className='h-20 w-auto'/></h1>
-                        <p className="pt-4 text-2xl">Welcome Back</p>
-                        <p className="">Your Project Name</p>
-                    </center>
-                    <hr className='my-2'/>
+                <div className="bg-white py-16 px-8 rounded-2xl shadow-md w-full ">
+                    <div className="">
+                        <center>
+                            <BsChatLeftFill className='h-20 w-auto bg-green-500 p-4 rounded-xl text-green-800 shadow-md'/>
+                            <p className="text-bold pt-1">Online ChatApp</p>
+                        </center>
+                    </div>
                     <div className="my-4">
                         <form onSubmit={headleSubmit}>
                             <div className="my-2 md:mx-8">
