@@ -61,7 +61,7 @@ const authController = {
                     // create a token for login
                     const token = jwt.sign({ userId: checUser._id, userEmail: checUser.email, userRole: checUser.Role }, process.env.JWT_SECRET, { expiresIn: '1h' });
                     
-                    return res.json({Status: "Success", Token:token, Result: checUser})    
+                    return res.json({Msg: "Success", Token:token, Result: checUser})    
                 }
                 else{
                     return res.json({ Error: "Password is not Match..." })
