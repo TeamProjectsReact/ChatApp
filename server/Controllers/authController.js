@@ -50,12 +50,26 @@ const authController = {
 
     SignIn: async (req, res) => {
         try{
-            const {
-                email,
-                password
-            } = req.body
-    
-            // console.log(req.body)
+            const { email, password } = req.body;
+
+            const checUser = await User.findOne({ email })
+
+            if(checUser) {
+                const checkPass = await bcrypt.compare(password, checUser.password)
+
+                if(checkPass){
+                    // create a token for login
+                    const token = jwt.sign({ userId: checUser._id, userEmail: checUser.email, userRole: checUser.Role }, process.env.JWT_SECRET, { expiresIn: '1h' });
+                    
+                    return res.json({Status: "Success", Token:token, Result: checUser})    
+                }
+                else{
+                    return res.json({ Error: "Password is not Match..." })
+                }
+            }
+            else{
+                return res.json({ Error: "No user Found..."})
+            }
         }
         catch (err) {
             console.log(err)
