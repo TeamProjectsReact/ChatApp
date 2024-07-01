@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import  secureLocalStorage  from  "react-secure-storage"
-import { BsChatLeftFill } from "react-icons/bs";
+import { BsChatLeftFill, BsPersonFillGear, BsPower } from "react-icons/bs";
 
 const Dashboard = () => {
     const navigate = useNavigate()
@@ -17,9 +17,25 @@ const Dashboard = () => {
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className="bg-[url('https://wallpapercave.com/wp/wp3998740.png')] bg-cover bg-center py-8 px-12 min-h-screen">
-                <div className="">
-                    <BsChatLeftFill className='h-16 w-auto bg-green-500 p-4 rounded-xl text-green-800 shadow-md'/>
-                    <p className="text-bold pt-1">Online ChatApp</p>
+                <div className="md:flex justify-between">
+                    <div className="flex ">
+                        <BsChatLeftFill className='h-16 w-auto bg-green-500 p-4 rounded-xl text-green-800 shadow-md'/>
+                        <p className="font-bold text-white pt-1 text-2xl pl-2 pt-3 ">Online ChatApp</p>
+                    </div>
+                    <div className="flex mt-2">
+                        <div className="flex">                            
+                            <p className="text-2xl text-white flex">
+                                <BsPersonFillGear />
+                            </p>
+                            <p className="pl-2 font-semibold text-white">My Profile</p>
+                        </div>
+                        <div className="flex pl-4 cursor-pointer" onClick={logout}>                            
+                            <p className="text-2xl text-white flex">
+                                <BsPower />
+                            </p>
+                            <p className="pl-2 font-semibold text-white">Logout</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
