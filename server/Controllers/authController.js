@@ -5,7 +5,13 @@ const User = require('../Models/User')
 
 const authController = {
     SignUp: async (req, res) => {
+        const {
+            username,
+            email, 
+            password
+        } = req.body
 
+        
     },
 
     SignIn: async (req, res) => {
