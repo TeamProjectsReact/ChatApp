@@ -50,14 +50,17 @@ const authController = {
     },
 
     SignIn: async (req, res) => {
-        const {
-            email,
-            password
-        } = req.body
-
-        // console.log(req.body)
-
-
+        try{
+            const {
+                email,
+                password
+            } = req.body
+    
+            // console.log(req.body)
+        }
+        catch (err) {
+            console.log(err)
+        }
     }
 }
 
