@@ -36,7 +36,7 @@ const SignUp = () => {
 
     }
   return (
-    <div className='bg-gray-200 min-h-screen py-24 px-8'>
+    <div className={`bg-cover min-h-screen py-24 px-8 bg-[url('https://wallpapercave.com/wp/wp3998740.png')]`}>
         <div className="md:grid grid-cols-3 gap-2">
             <div className=""></div>
             <div className="">
