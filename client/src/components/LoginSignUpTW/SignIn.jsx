@@ -19,27 +19,22 @@ const SignIn = () => {
         // login to system
 
         try{
-            const res = await axios.post('http://localhost:5000/auth/SignIn', LoginData)
-
-            const loginToken = res.data.Token;
-
-            //store token in localstorage
-            localStorage.setItem('LoginToken', loginToken)
-
-            if(res.data.Status === "Success"){
-                alert("Login Successfull")
-                localStorage.setItem('token', res.data.Token)
-                secureLocalStorage.setItem('Login1', res.data.Result.email)
-                secureLocalStorage.setItem('Login2', res.data.Result.Role)   
-                navigate('/Dashboard')
-                // login user Email 
-                 
-            }
-            else{
-                alert(res.data.Error)
-            }
+            const res = axios.post('http://localhost:5000/auth/SignIn', LoginData)
+            .then(res => {
+                if(res.data.Status === "Success"){
+                    alert("Login Successfull")
+                    localStorage.setItem('token', res.data.Token)
+                    navigate('/Dashboard')
+                    // login user Email 
+                    secureLocalStorage.setItem('Login1', res.data.Result.email)
+                    secureLocalStorage.setItem('Login2', res.data.Result.Role)                    
+                }
+                else{
+                    alert(res.data.Error)
+                }
+            })
         }
-        catch (err) {
+        catch (err){
             console.log(err)
         }
     }
