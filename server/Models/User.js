@@ -22,6 +22,9 @@ const userSchema = new mongoose.Schema({
     Department: {
         type: String,
     },
+    is_active: {
+        required: true,
+    },
     createdAt: {
         type: Date,
         default: Date.now
