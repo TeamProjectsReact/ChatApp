@@ -70,10 +70,9 @@ const Dashboard = () => {
                             selectedUser ? 
                                 (
                                     <div className="">
-                                        <div className="bg-gray-100 p-4 rounded shadow-md">
-                                            <p className="mb-2"><strong>Name:</strong> {selectedUser.name}</p>
-                                            <p className="mb-2"><strong>Age:</strong> {selectedUser.age}</p>
-                                            <p className="mb-2"><strong>Email:</strong> {selectedUser.email}</p>
+                                        <div className="flex border-b border-gray-200 pb-2">
+                                            <img src={selectedUser.image} alt="" className='h-10 w-auto'/>
+                                            <p className="pt-1 pl-2 font-semibold text-xl">{selectedUser.name}</p>
                                         </div>
                                     </div>
                                 )
