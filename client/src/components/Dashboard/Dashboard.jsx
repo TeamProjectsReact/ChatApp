@@ -15,9 +15,9 @@ const Dashboard = () => {
     }
 
     const [users] = useState([
-        { name: 'John Doe', age: 30, email: 'john@example.com' },
-        { name: 'Jane Smith', age: 25, email: 'jane@example.com' },
-        { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },
+        { image: 'https://cdn-icons-png.flaticon.com/128/3177/3177440.png', name: 'John Doe', age: 30, email: 'john@example.com' },
+        { image: 'https://cdn-icons-png.flaticon.com/128/3177/3177440.png', name: 'Jane Smith', age: 25, email: 'jane@example.com' },
+        { image: 'https://cdn-icons-png.flaticon.com/128/3177/3177440.png', name: 'Bob Johnson', age: 40, email: 'bob@example.com' },
     ]);
 
     const [selectedUser, setSelectedUser] = useState(null)
@@ -57,7 +57,7 @@ const Dashboard = () => {
                                 users.map((user, index) => {
                                     return (
                                         <div onClick={() => headleUserData(user)} key={index} className='flex py-2 border-b border-gray-200 rounded cursor-pointer duration-500 hover:bg-gray-200'>
-                                            {/* <img src={user.image} alt="" className='pl-4 h-10 w-auto'/> */}
+                                            <img src={user.image} alt="" className='pl-4 h-10 w-auto'/>
                                             <p className="pt-2 pl-4">{user.name}</p>
                                         </div>
                                     )
