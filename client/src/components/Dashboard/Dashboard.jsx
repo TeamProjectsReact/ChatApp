@@ -20,6 +20,8 @@ const Dashboard = () => {
         {id: 3, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."}
     ]
 
+    const [selectedUser, setSelectedUser] = useState([])
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className="bg-[url('https://wallpapercave.com/wp/wp3998740.png')] bg-cover bg-center py-8 px-12 min-h-screen">
