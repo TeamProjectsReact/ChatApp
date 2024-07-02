@@ -40,11 +40,11 @@ const Dashboard = () => {
                 <div className="md:grid grid-cols-3 gap-2 my-8 md:mx-4">
                     <div className="py-8 px-4 rounded-md bg-white w-full">
                         <div>
-                            <img src="" alt="" />
+                            <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="" />
                             Kamal Perera
                         </div>
                         <div className=''>
-                            <img src="" alt="" />
+                            <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="" />
                             Kamal Perera
                         </div>
                     </div>
