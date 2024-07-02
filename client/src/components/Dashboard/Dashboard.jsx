@@ -37,8 +37,8 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="md:grid grid-cols-3 gap-4 my-8 mx-4">
-                    <div className="py-8 px-4 rounded-xl bg-white w-full">
+                <div className="md:grid grid-cols-3 gap-2 my-8 md:mx-4">
+                    <div className="py-8 px-4 rounded-md bg-white w-full">
                         <div>
                             <img src="" alt="" />
                             Kamal Perera
@@ -48,7 +48,7 @@ const Dashboard = () => {
                             Kamal Perera
                         </div>
                     </div>
-                    <div className="">
+                    <div className="col-span-2 bg-white rounded-md py-4 px-4">
                         oneChat
                     </div>
                 </div>
