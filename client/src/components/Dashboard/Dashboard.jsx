@@ -20,7 +20,7 @@ const Dashboard = () => {
         { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },
     ]);
 
-    const [selectedUser, setSelectedUser] = useState([])
+    const [selectedUser, setSelectedUser] = useState(null)
 
     const headleUserData = (user) => {
         setSelectedUser(user)
