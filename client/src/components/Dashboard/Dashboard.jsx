@@ -66,7 +66,24 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div className="col-span-2 bg-white rounded-md py-4 px-4">
-                        
+                        {
+                            selectedUser ? 
+                                (
+                                    <div className="">
+                                        <div className="bg-gray-100 p-4 rounded shadow-md">
+                                            <p className="mb-2"><strong>Name:</strong> {selectedUser.name}</p>
+                                            <p className="mb-2"><strong>Age:</strong> {selectedUser.age}</p>
+                                            <p className="mb-2"><strong>Email:</strong> {selectedUser.email}</p>
+                                        </div>
+                                    </div>
+                                )
+                            :
+                                (
+                                    <div className="">
+                                        Select Chat
+                                    </div>
+                                )
+                        }
                     </div>
                 </div>
             </div>
