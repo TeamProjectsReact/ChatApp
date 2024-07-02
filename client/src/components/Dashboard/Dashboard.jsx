@@ -39,13 +39,13 @@ const Dashboard = () => {
                 </div>
                 <div className="md:grid grid-cols-3 gap-2 my-8 md:mx-4">
                     <div className="py-8 px-4 rounded-md bg-white w-full">
-                        <div>
-                            <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="" />
-                            Kamal Perera
+                        <div className='flex py-2 border-b border-gray-200 rounded cursor-pointer duration-500 hover:bg-gray-200'>
+                            <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="" className='pl-4 h-10 w-auto'/>
+                            <p className="pt-2 pl-4">Kamal Perera</p>
                         </div>
-                        <div className=''>
-                            <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="" />
-                            Kamal Perera
+                        <div className='flex py-2 border-b border-gray-200 rounded cursor-pointer duration-500 hover:bg-gray-200'>
+                            <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="" className='pl-4 h-10 w-auto'/>
+                            <p className="pt-2 pl-4">Amara Somarathtne Perera</p>
                         </div>
                     </div>
                     <div className="col-span-2 bg-white rounded-md py-4 px-4">
