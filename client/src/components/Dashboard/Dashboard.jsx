@@ -37,7 +37,19 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
+                <div className="md:flex my-8 mx-4">
+                    <div className="py-8 px-4 rounded-xl bg-white">
+                        <li>
+                            <img src="" alt="" />
+                            Kamal Perera
+                        </li>
+                    </div>
+                    <div className="">
+                        oneChat
+                    </div>
+                </div>
             </div>
+
         )
     }
     else{
