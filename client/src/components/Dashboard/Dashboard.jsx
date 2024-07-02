@@ -66,7 +66,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div className="col-span-2 bg-white rounded-md py-4 px-4">
-                        oneChat
+                        
                     </div>
                 </div>
             </div>
