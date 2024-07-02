@@ -14,10 +14,16 @@ const Dashboard = () => {
         window.location.reload();
     }
 
+    const Users = [
+        {id: 1, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."},
+        {id: 2, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."},
+        {id: 3, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."}
+    ]
+
     if(RoleUser !== null && EmailUser !== null){
         return (
             <div className="bg-[url('https://wallpapercave.com/wp/wp3998740.png')] bg-cover bg-center py-8 px-12 min-h-screen">
-                <div className="md:flex justify-between">
+                <div className="md:flex justify-between">                    
                     <div className="flex ">
                         <BsChatLeftFill className='h-16 w-auto bg-green-500 p-4 rounded-xl text-green-800 shadow-md'/>
                         <p className="font-bold text-white pt-1 text-2xl pl-2 pt-3 ">Online ChatApp</p>
@@ -39,6 +45,7 @@ const Dashboard = () => {
                 </div>
                 <div className="md:grid grid-cols-3 gap-2 my-8 md:mx-4">
                     <div className="py-8 px-4 rounded-md bg-white w-full">
+                        <h1 className="text-xl font-semibold text-gray-500 pl-4 pb-4">My Chats</h1>
                         <div className='flex py-2 border-b border-gray-200 rounded cursor-pointer duration-500 hover:bg-gray-200'>
                             <img src="https://cdn-icons-png.flaticon.com/128/3177/3177440.png" alt="" className='pl-4 h-10 w-auto'/>
                             <p className="pt-2 pl-4">Kamal Perera</p>
