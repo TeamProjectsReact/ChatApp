@@ -37,13 +37,13 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="md:grid grid-cols-2 gap-4 my-8 mx-4">
+                <div className="md:grid grid-cols-3 gap-4 my-8 mx-4">
                     <div className="py-8 px-4 rounded-xl bg-white w-full">
                         <div>
                             <img src="" alt="" />
                             Kamal Perera
                         </div>
-                        <div>
+                        <div className=''>
                             <img src="" alt="" />
                             Kamal Perera
                         </div>
