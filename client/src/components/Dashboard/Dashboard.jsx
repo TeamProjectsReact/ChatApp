@@ -14,13 +14,17 @@ const Dashboard = () => {
         window.location.reload();
     }
 
-    const chatUsers = [
-        {id: 1, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."},
-        {id: 2, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."},
-        {id: 3, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."}
-    ]
+    const [users] = useState([
+        { name: 'John Doe', age: 30, email: 'john@example.com' },
+        { name: 'Jane Smith', age: 25, email: 'jane@example.com' },
+        { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },
+    ]);
 
     const [selectedUser, setSelectedUser] = useState([])
+
+    const headleUserData = (user) => {
+
+    }
 
     if(RoleUser !== null && EmailUser !== null){
         return (
@@ -50,10 +54,10 @@ const Dashboard = () => {
                         <h1 className="text-xl font-semibold text-gray-500 pl-4 pb-4">My Chats</h1>
                         <div className="">
                             {
-                                chatUsers.map((user, index) => {
+                                users.map((user, index) => {
                                     return (
-                                        <div key={index} className='flex py-2 border-b border-gray-200 rounded cursor-pointer duration-500 hover:bg-gray-200'>
-                                            <img src={user.image} alt="" className='pl-4 h-10 w-auto'/>
+                                        <div onClick={() => headleUserData(user)} key={index} className='flex py-2 border-b border-gray-200 rounded cursor-pointer duration-500 hover:bg-gray-200'>
+                                            {/* <img src={user.image} alt="" className='pl-4 h-10 w-auto'/> */}
                                             <p className="pt-2 pl-4">{user.name}</p>
                                         </div>
                                     )
