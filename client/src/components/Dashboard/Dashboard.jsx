@@ -23,7 +23,7 @@ const Dashboard = () => {
     const [selectedUser, setSelectedUser] = useState([])
 
     const headleUserData = (user) => {
-
+        setSelectedUser(user)
     }
 
     if(RoleUser !== null && EmailUser !== null){
