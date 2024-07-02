@@ -14,7 +14,7 @@ const Dashboard = () => {
         window.location.reload();
     }
 
-    const Users = [
+    const chatUsers = [
         {id: 1, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."},
         {id: 2, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."},
         {id: 3, name: "Kamal Perera", image: "https://cdn-icons-png.flaticon.com/128/3177/3177440.png", data: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla obcaecati accusamus a consequatur veritatis ducimus quas vero iste, labore, dolorum assumenda facere porro doloremque expedita reiciendis cumque, tenetur rerum nesciunt."}
@@ -47,9 +47,8 @@ const Dashboard = () => {
                     <div className="py-8 px-4 rounded-md bg-white w-full">
                         <h1 className="text-xl font-semibold text-gray-500 pl-4 pb-4">My Chats</h1>
                         <div className="">
-                        {
-                            (() => {
-                                Users.map((user, index) => {
+                            {
+                                chatUsers.map((user, index) => {
                                     return (
                                         <div key={index} className='flex py-2 border-b border-gray-200 rounded cursor-pointer duration-500 hover:bg-gray-200'>
                                             <img src={user.image} alt="" className='pl-4 h-10 w-auto'/>
@@ -57,8 +56,7 @@ const Dashboard = () => {
                                         </div>
                                     )
                                 })
-                            })()
-                        }
+                            }
                         </div>
                     </div>
                     <div className="col-span-2 bg-white rounded-md py-4 px-4">
